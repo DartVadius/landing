@@ -1,0 +1,21 @@
+.pagination1 {
+    display: inline-block;
+}
+
+.pagination1 li {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+
+}
+
+.pagination li.active {
+    background-color: #0d1217;
+    color: white;
+}
+
+.pagination1 ul {
+    list-style-type: none;
+    font-size: 20px;
+}

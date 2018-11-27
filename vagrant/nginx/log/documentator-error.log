@@ -1,0 +1,36 @@
+2018/06/07 18:54:02 [error] 1933#1933: *87 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Method yii\bootstrap\ActiveField::__toString() must not throw an exception, caught Error: Undefined class constant 'STATUS_ACTIVE' in /app/vendor/mdmsoft/yii2-admin/views/user/requestPasswordResetToken.php on line 0
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /app/web/index.php:0
+PHP message: PHP   2. yii\web\Application->run() /app/web/index.php:12
+PHP message: PHP   3. yii\web\Application->handleRequest() /app/vendor/yiisoft/yii2/base/Application.php:380
+PHP message: PHP   4. yii\web\Application->runAction() /app/vendor/yiisoft/yii2/web/Application.php:102
+PHP message: PHP   5. mdm\admin\controllers\UserController->runAction() /app/vendor/yiisoft/yii2/base/Module.php:523
+PHP message: PHP   6. yii\base\InlineAction->runWithParams() /app/vendor/yiisoft/yii2/base/Controller.php:156
+PHP message: PHP   7. call_user_func_array:{/app/vendor/yiisoft/yii2/base/InlineAction.php:57}() /app/vendor/yiisoft/yii2/base/InlineAction.php:57
+PHP message: PHP   8. mdm\admin\controllers\UserController->actionRequestPasswordReset() /app/vendor/yiisoft/yii2/base/InlineAction.php:57
+PHP message: PHP   9. mdm\admin\controllers\UserController->render() /app/vendor/mdmsoft/yii2-admin/controllers/UserController.php:212
+PHP message: PHP  10. yii\web\View->render() /app/vendor/yiisoft/yii2/base/Controller.php:381
+PHP message: PHP  11. yii\web\View->renderFile() /app/vendor/yiisoft/yii2/base/View.php:152
+PHP message: PHP  12. yii\web\View->renderPhpFile() /app/vendor/yiisoft/yii2/base/View.php:250
+PHP message: PHP  13. require() /app/vendor/yiisoft/yii2/base/View.php:328" while reading response header from upstream, client: 192.168.83.1, server: documentator, request: "GET /rbac/user/request-password-reset HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "documentator", referrer: "http://documentator/login"
+2018/06/11 19:03:06 [error] 1930#1930: *53 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 192.168.83.1, server: documentator, request: "GET /product/admin/pack/index HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "documentator", referrer: "http://documentator/product/admin/material/index?page=1&per-page=50&sort=-buying_date"
+2018/06/11 19:03:10 [error] 1930#1930: *53 FastCGI sent in stderr: "PHP message: PHP Notice:  Array to string conversion in /app/modules/product/views/admin/pack/index.php on line 34
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /app/web/index.php:0
+PHP message: PHP   2. yii\web\Application->run() /app/web/index.php:12
+PHP message: PHP   3. yii\web\Application->handleRequest() /app/vendor/yiisoft/yii2/base/Application.php:380
+PHP message: PHP   4. yii\web\Application->runAction() /app/vendor/yiisoft/yii2/web/Application.php:102
+PHP message: PHP   5. app\modules\product\controllers\admin\PackController->runAction() /app/vendor/yiisoft/yii2/base/Module.php:523
+PHP message: PHP   6. yii\base\InlineAction->runWithParams() /app/vendor/yiisoft/yii2/base/Controller.php:156
+PHP message: PHP   7. call_user_func_array:{/app/vendor/yiisoft/yii2/base/InlineAction.php:57}() /app/vendor/yiisoft/yii2/base/InlineAction.php:57
+PHP message: PHP   8. app\modules\product\controllers\admin\PackController->actionIndex() /app/vendor/yiisoft/yii2/base/InlineAction.php:57
+PHP message: PHP   9. app\modules\product\controllers\admin\PackController->render() /app/modules/product/controllers/admin/PackController.php:41
+PHP message: PHP  10. yii\web\View->render() /app/vendor/yiisoft/yii2/base/Controller.php:381
+PHP message: PHP  11. yii\web\View->renderFile() /app/vendor/yiisoft/yii2/base/View.php:152
+PHP message: PHP  12. yii\web\View->renderPhpFile() /app/vendor/yiisoft/yii2/base/View.php:250
+PHP message: An Error occurred while handling another error:
+ReflectionException: Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist in /app/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /app/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /app/vendor/yiisoft/yii2/base/View.php(328): require('/a
